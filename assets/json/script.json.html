@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2> Riyanto 1303170022 IT-41-03 </h2>
+<p>Sya merupakan mahasiswa Telkom University Jurusan Teknologi Informasi Angkatan 2017</p>
+
+<p id="demo"></p>
+
+<script>
+var myObj, i, j, x = "";
+myObj = {
+  "Nama":"Riyanto",
+  "NIM":1303170022,
+  "Kelas" : "IT-41-03",
+  "datdiri": [
+    {"name":"Hobbies", "models":["badminton", "Jogging", "Travelling"]},
+    {"name":"Skills", "models":["komunikasi", "game", "manage"]},
+    {"name":"Education", "models":["SMAN 6 Tangerang", "SMPN 5 Tangerang", "SDN 1 Jurumudi"]},
+    {"name":"Experience", "models":["Badminton SMA", "TUBSC", "pengawasan"]}
+  ]
+}
+for (i in myObj.datdiri) {
+  x += "<h3>"+myObj.Nama +" "+ myObj.datdiri[i].name + "</h3>";
+  for (j in myObj.datdiri[i].models) {
+    x += myObj.datdiri[i].models[j] + "<br>";
+  }
+}
+document.getElementById("demo").innerHTML = x;
+</script>
+
+</body>
+</html>
